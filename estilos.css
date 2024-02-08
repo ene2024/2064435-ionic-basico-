@@ -1,0 +1,25 @@
+
+/*Estilos por etiqueta*/
+
+
+button{
+    background-color: rgb(209, 152, 204);
+    border-color:blue;
+    border: none;
+    padding: 10px;
+}
+
+button:hover{
+    background-color: blueviolet;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: darkgoldenrod;
+    font-size: 250%;
+}
+
+body{
+    border-radius: 15px;
+    background-color: beige;
+}
