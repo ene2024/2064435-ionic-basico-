@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 3 - Lab Apps Móviles</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="login-form">
+        <label for="usuario" class="label">Usuario:</label>
+        <input type="text" id="usuario" placeholder="Ingrese su usuario" class="input"><br>
+        
+        <label for="contrasena" class="label">Contraseña:</label>
+        <input type="password" id="contrasena" placeholder="Ingrese su contraseña" class="input">
+        
+        <div class="button-container">
+            <button onclick="login()" class="common-button">Iniciar sesión</button>
+            <button onclick="registro()" class="common-button">Registrarse</button>
+        </div>
+        <div id="mensaje" class="mensaje"></div>
+    </div>
+    
+    <script src="codigo.js"></script> 
+</body>
+</html>
