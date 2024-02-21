@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Práctica 3 - Lab Apps Móviles</title>
+    <title>Práctica 4 - Lab Apps Móviles</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="login-form">
-        <label for="usuario" class="label">Usuario:</label>
-        <input type="text" id="usuario" placeholder="Ingrese su usuario" class="input"><br>
-        
-        <label for="contrasena" class="label">Contraseña:</label>
-        <input type="password" id="contrasena" placeholder="Ingrese su contraseña" class="input">
-        
-        <div class="button-container">
-            <button onclick="login()" class="common-button">Iniciar sesión</button>
-            <button onclick="registro()" class="common-button">Registrarse</button>
-        </div>
-        <div id="mensaje" class="mensaje"></div>
-    </div>
-    
+    <h1>TICKET</h1>
+    <ion-section>
+        <ion-list>
+            <ion-item>
+                <ion-input label="Producto:" id="productotxt"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+                <ion-input label="Precio:" id="preciotxt"></ion-input>
+            </ion-item>
+
+            <ion-button onclick="agregar()">Agregar</ion-button> 
+        </ion-list>
+    </ion-section>
+
+    <ion-section id="LISTADO">
+        <h1>LISTADO DE TICKET</h1>
+        <div id="listaProductos"></div>
+        <p id="total"></p>
+    </ion-section>
+
     <script src="codigo.js"></script> 
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
 </body>
 </html>
