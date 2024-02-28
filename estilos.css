@@ -1,34 +1,8 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+ion-col{
+    border-color: black;
+    border: solid 1px;
+    color: #fff;
+    background-color:cadetblue;
+    text-align: center;
 }
-
-h1 {
-    margin-top: 20px;
-}
-
-
-ion-item {
-    --padding-start: 0;
-}
-
-ion-button {
-    display: block;
-    margin: 20px auto;
-}
-
-#LISTADO {
-    border-top: 2px solid #ccc;
-    padding-top: 20px;
-}
-
-#LISTADO h1 {
-   
-    margin-bottom: 10px;
-}
-
-#listaProductos {
-    margin-bottom: 20px;
-}
-
 
