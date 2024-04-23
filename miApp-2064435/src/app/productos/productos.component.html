@@ -1,3 +1,7 @@
-<p>
-  productos works!
-</p>
+<router-outlet></router-outlet>
+<ion-card *ngFor="let producto of productos" [routerLink]="['/producto', producto.id]">
+    <ion-card-title>{{producto.title}}</ion-card-title>
+    <ion-card-content>
+      <img width="250px" height="150px" src="{{producto.image}}" alt="">
+    </ion-card-content>
+  </ion-card>
