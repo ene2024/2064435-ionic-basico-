@@ -1,13 +1,24 @@
-<ion-list>
-  <ion-item-sliding *ngFor="let alumno of alumnos">
-    <ion-item>
-      {{alumno}}
-    </ion-item>
-    <ion-item-options side="start">
-      <ion-item-option color="secondary" (click)="addToFavorites(alumno)">Agregar a Favoritos</ion-item-option>
-    </ion-item-options>
-    <ion-item-options side="end">
-      <ion-item-option color="danger" (click)="confirmDelete(alumno)">Eliminar</ion-item-option>
-    </ion-item-options>
-  </ion-item-sliding>
+
+<form #alumnosForm="ngForm" (ngSubmit)="agregarAlumno()">
+  <ion-label>Nombre alumno:</ion-label>
+  <ion-input required [(ngModel)]="alumno.nombre" placeholder="Ejemplo: Eduardo" name="nombre"></ion-input>
+
+  <ion-label>
+    <ion-checkbox [(ngModel)]="alumno.presente" name="presente"></ion-checkbox> Presente
+  </ion-label>
+
+  <div>
+    <ion-button type="submit">Agregar</ion-button>
+  </div>
+</form>
+
+
+<ion-list *ngIf="alumnos.length > 0">
+  <ion-item *ngFor="let alumno of alumnos">
+
+    {{ alumno.nombre }}
+    <ion-badge slot="end" [color]="alumno.presente ? 'success' : 'danger'">
+      {{ alumno.presente ? 'Presente' : 'Ausente' }}
+    </ion-badge>
+  </ion-item>
 </ion-list>

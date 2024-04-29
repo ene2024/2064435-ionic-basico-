@@ -7,7 +7,7 @@ import { ProductosComponent } from './productos/productos.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/productos',
+    redirectTo: 'lista-alumnos',
     pathMatch: 'full'
   },
   {
@@ -18,6 +18,7 @@ const routes: Routes = [
     path: 'producto/:id',
     component: ProductoDetalleComponent
  },
+
 ];
 @NgModule({
   imports: [

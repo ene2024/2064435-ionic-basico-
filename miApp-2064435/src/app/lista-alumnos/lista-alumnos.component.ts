@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ActionSheetController } from '@ionic/angular';
+import { alumno } from '../model/alumno.model';
 
 @Component({
   selector: 'app-lista-alumnos',
@@ -7,17 +8,30 @@ import { AlertController, ActionSheetController } from '@ionic/angular';
   styleUrls: ['./lista-alumnos.component.scss'],
 })
 export class ListaAlumnosComponent implements OnInit {
+
+  result: string = '';
+  alumnos: alumno[] = []; // ["Carlos", "Ximena", "Alberto", "Eduardo", "Baraba", "Georgina", "Kevin"];
+  
   constructor(
     private alertController: AlertController,
     private actionSheetController: ActionSheetController
   ) {}
 
+  alumno: alumno = {
+    nombre: '',
+    presente: false
+  }
+
+  agregarAlumno(): void {
+    this.alumnos.push(this.alumno); 
+    this.alumno = { nombre: '', presente: false }
+  }
+
   ngOnInit() {}
 
-  alumnos: any = ["Carlos", "Ximena", "Alberto", "Eduardo", "Baraba", "Georgina", "Kevin"];
 
   async addToFavorites(alumno: string) {
-    // Lógica para agregar a favoritos
+  
   }
 
   async confirmDelete(alumno: string) {
@@ -29,7 +43,7 @@ export class ListaAlumnosComponent implements OnInit {
           role: 'destructive',
           icon: 'trash',
           handler: () => {
-            // Lógica para eliminar el alumno
+      
           }
         },
         {
