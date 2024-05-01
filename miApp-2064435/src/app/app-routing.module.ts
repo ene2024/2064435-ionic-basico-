@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CamaraComponent } from './camara/camara.component';
 import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
 import { ProductosComponent } from './productos/productos.component';
 
 
 const routes: Routes = [
+  { path: 'camara', component: CamaraComponent },
   {
     path: '',
-    redirectTo: 'lista-alumnos',
+    redirectTo: '/camara',
     pathMatch: 'full'
   },
   {
